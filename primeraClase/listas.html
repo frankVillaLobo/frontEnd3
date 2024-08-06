@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/react/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <h1 id="titulo">Lista de peliculas</h1>
+    </div>
+  </body>
+
+  <script type="text/babel">
+    //  babel nos permite trabajar en una sintaxis muchos mas amigable sin necesidad de usar puro js 
+    const lista = [
+      "Andres y los niños",
+      "El Padrino",
+      "La Guerra de las Galaxias",
+      "El Caballero Oscuro",
+      "Forrest Gump",
+      "Inception",
+      "El Señor de los Anillos: La Comunidad del Anillo",
+      "Titanic",
+      "Avatar",
+      "Pulp Fiction",
+      "El Resplandor",
+    ];
+    const Peliculas = () => {
+      const arrMap = lista.map((pelicula) => {
+        // return React.createElement('li',null,pelicula);
+        // ahoa lo vamos a hacer con jsx y que babel lo interprete. Ojo que no se debe poner con bacticks y se manda de una vez en jsx para que lo interprete babel ya como html
+        return <li>{pelicula}</li>
+      });
+      console.log(arrMap)
+      // return React.createElement("ul", null, arrMap);
+      return <ul>{arrMap}</ul>
+    };
+
+    const div = document.getElementById("root");
+    //ahora lo que hago es no mandar peliculas como una funcion de js si no como un componente jsx que lo va a interpretar babel
+    ReactDOM.render(<Peliculas/>, div);
+  </script>
+</html>

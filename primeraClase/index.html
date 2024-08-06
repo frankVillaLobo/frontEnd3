@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/react/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+  </head>
+  <body>
+    <div id="root">
+      <h1 id="titulo">
+        Lista de peliculas
+      </h1>
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    const lista = [
+    "El Padrino",
+    "La Guerra de las Galaxias",
+    "El Caballero Oscuro",
+    "Forrest Gump",
+    "Inception",
+    "El Señor de los Anillos: La Comunidad del Anillo",
+    "Titanic",
+    "Avatar",
+    "Pulp Fiction",
+    "El Resplandor"
+];
+    const elemento = React.createElement('h1',{id:'titulo'},'Hola camada 2')
+    // Se inyecta en el html con react
+    const div = document.getElementById('root')
+    ReactDOM.render(elemento,div)
+  </script>
+</html>

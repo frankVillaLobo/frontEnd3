@@ -1,26 +1,27 @@
 import { useState } from "react";
-import "./App.css";
-import Componente from "./Components/Componente";
+import "./Styles/App.css";
+
 import Navbar from "./Components/Navbar";
-import CompDePrueba from "./Components/CompDePrueba";
-import Card from "./Components/Card";
+import Home from "./Components/Home";
+
+
 
 function App() {
-  const [count, setCount] = useState(0);
-  const variable = 3;
-  const nombre = "Andres";
+  // creamos una lista para le manejo de map
+  const lista = ["Elemento 1", "Elemento 2", "Elemento 3"];
+  // los elementos de map son lo que se itera, index y la lista (no se usa tanto)
+  const mapLista = lista.map((elemento, index) => {
+    //siempre tengo que retornar en el call back de map
+    // crea un clon de la lista original
+    return <li key={index}>{elemento}</li>;
+    // siempre nos pide que el return se haga con un key unico, para evitar problemas de renderizado
+    // ya que el dom virutal actualiza los componentes de manera individual sin tener que actualziar tooodo el dom
+  });
+
   return (
     <>
-      <Navbar />
-      <h1>Bienvenidos a Vite</h1>
-      <Componente variable={variable} />
-      {/* tengo dos formas de tener un componente asi, doble o simple */}
-      <Componente variable={variable}></Componente>
-      {/* <Card nombre="Pedro" email="pedro@email.com"/>
-      <Card nombre="Mateo" email="mateo@email.com"/>
-      <Card nombre="Claudia" email="Claudia@email.com"/> */}
-
-      <CompDePrueba nombre={nombre}>Hola</CompDePrueba>
+      <Navbar/>
+      <Home></Home>
     </>
   );
 }

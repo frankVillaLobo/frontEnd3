@@ -8,6 +8,7 @@ import Card from "./Components/Card";
 function App() {
   const [count, setCount] = useState(0);
   const variable = 3;
+  const nombre = "Andres";
   return (
     <>
       <Navbar />
@@ -15,8 +16,11 @@ function App() {
       <Componente variable={variable} />
       {/* tengo dos formas de tener un componente asi, doble o simple */}
       <Componente variable={variable}></Componente>
-      <CompDePrueba/>
-      <Card/>
+      {/* <Card nombre="Pedro" email="pedro@email.com"/>
+      <Card nombre="Mateo" email="mateo@email.com"/>
+      <Card nombre="Claudia" email="Claudia@email.com"/> */}
+
+      <CompDePrueba nombre={nombre}>Hola</CompDePrueba>
     </>
   );
 }

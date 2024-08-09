@@ -1,0 +1,12 @@
+.counterContainer{
+    display:flex;
+    flex-direction: row;
+    height: 20px;
+    align-items: center;
+    justify-content: space-around
+}
+
+.counterContainer h4{
+   color:white;
+   padding: 10px;
+}

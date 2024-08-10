@@ -1,0 +1,1 @@
+export let actividades = ["Hacer la tarea","Lavar los platos","Cocinar el almuerzo"]

@@ -10,7 +10,7 @@ const Home = () => {
   const [cart, setCart] = useState([]);
   
   const [actLista,setActivades] = useState([])
-  console.log(actLista);
+
   return (
     <div className={HomeStyle.homeContainer}>
       <h1>Lista de pizzas</h1>

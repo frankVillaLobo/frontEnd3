@@ -8,7 +8,7 @@ export const CatAxios = () => {
 
   useEffect(() => {
     axios(url).then((res) => {
-      console.log(res.data);
+    //   console.log(res.data);
       setCat(res.data[0]);
     })
     .catch((error)=>{console.error(error)});

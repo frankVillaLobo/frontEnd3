@@ -31,11 +31,12 @@ function App() {
       >
         {toggle ? "Desmontar componente" : "Montar componente"}
       </button> */}
-      {/* <Navbar/>
-      <Form></Form>
-      <Home></Home> */}
-      <DogFetch></DogFetch>
-      <CatAxios></CatAxios>
+      <Navbar/>
+      {/* <Form></Form> */}
+      <Home></Home>
+      {/* <DogFetch></DogFetch>
+      <CatAxios></CatAxios> */}
+
 
     </>
   );

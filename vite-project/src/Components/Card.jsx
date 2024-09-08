@@ -2,7 +2,7 @@ import Button from "./Button";
 import CardStyles from "../Styles/Card.module.css";
 import Counter from "./Counter";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 const Card = ({recipe,cart,setCart}) => {
   // puedo hacer una desestructuracion de los props para poder manejar las variables que trae este objeto de manera individual
 
@@ -13,7 +13,6 @@ const Card = ({recipe,cart,setCart}) => {
       <h3>{recipe.tipo}</h3>
       <p>{recipe.precio}</p>
       <Counter></Counter>
-      <Button>Ver detalle</Button>
       <Button onClick={()=>{setCart([...cart,recipe.tipo])}}>🛒</Button>
     </div>
   );

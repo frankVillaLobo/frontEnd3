@@ -1,10 +1,10 @@
 import { pizzas } from "../Utils/pizzas";
-import { actividades } from "../Utils/actividades";
 
-import Card from "./Card";
-import CardPokemon from "./CardPokemon";
 
-import Actividades from "./Actividades";
+import Card from "../Components/Card";
+import CardPokemon from "../Components/CardPokemon";
+
+import Actividades from "../Components/Actividades";
 
 import HomeStyle from "../Styles/Home.module.css";
 import { useEffect, useState } from "react";
@@ -14,7 +14,7 @@ const Home = () => {
 
   // const [actLista,setActivades] = useState([])
 
-  const url = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0";
+  const url = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
 
   useEffect(() => {
     const getAllPokemon = async () => {
@@ -42,7 +42,6 @@ const Home = () => {
         };
       });
       setListObjects(listObjects)
-      console.log(listObjects);
     };
     // get the list of objets based on the url obtained
 
@@ -64,7 +63,6 @@ const Home = () => {
           return <CardPokemon key={pokemon.id} pokemon={pokemon} />;
         })}
       </div>
-      {/* <Actividades actividades={actividades} actLista={actLista} setActivades={setActivades}></Actividades> */}
     </div>
   );
 };
